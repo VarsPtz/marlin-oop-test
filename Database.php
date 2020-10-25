@@ -62,35 +62,15 @@
 
       public function get($table, $where = [])
       {
-          if (count($where) === 3) {
-
-              $operators = [
-                  '=',
-                  '>',
-                  '>=',
-                  '<',
-                  '<=',
-              ];
-
-              $field  = $where[0];
-              $operator = $where[1];
-              $value = $where[2];
-
-              //var_dump($where[0], $where[1], $where[2]);die();
-
-              if (in_array($operator, $operators)) {
-                  $sql = "SELECT * FROM {$table}  WHERE {$field} {$operator} ?";
-                  if (!$this->query($sql, [$value])->error()) {
-                      return $this;
-                  }
-              }
-
-          }
-
-          return false;
+          return $this->action('SELECT * ', $table, $where);
       }
 
       public function delete($table, $where = [])
+      {
+          return $this->action('DELETE', $table, $where);
+      }
+
+      public function action($action, $table, $where = [])
       {
           if (count($where) === 3) {
 
@@ -106,10 +86,8 @@
               $operator = $where[1];
               $value = $where[2];
 
-              //var_dump($where[0], $where[1], $where[2]);die();
-
               if (in_array($operator, $operators)) {
-                  $sql = "DELETE * FROM {$table}  WHERE {$field} {$operator} ?";
+                  $sql = "{$action} FROM {$table}  WHERE {$field} {$operator} ?";
                   if (!$this->query($sql, [$value])->error()) {
                       return $this;
                   }
