@@ -89,5 +89,35 @@
 
           return false;
       }
+
+      public function delete($table, $where = [])
+      {
+          if (count($where) === 3) {
+
+              $operators = [
+                  '=',
+                  '>',
+                  '>=',
+                  '<',
+                  '<=',
+              ];
+
+              $field  = $where[0];
+              $operator = $where[1];
+              $value = $where[2];
+
+              //var_dump($where[0], $where[1], $where[2]);die();
+
+              if (in_array($operator, $operators)) {
+                  $sql = "DELETE * FROM {$table}  WHERE {$field} {$operator} ?";
+                  if (!$this->query($sql, [$value])->error()) {
+                      return $this;
+                  }
+              }
+
+          }
+
+          return false;
+      }
   }
 ?>
