@@ -134,5 +134,9 @@
 
           return false;
       }
+
+      public function first() {
+          return $this->results()[0];
+      }
   }
 ?>
