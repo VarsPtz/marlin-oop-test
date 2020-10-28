@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="919111a5-527b-417f-9f90-90b666662d9c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/Database.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
@@ -53,18 +63,29 @@
       <workItem from="1603545579386" duration="2564000" />
       <workItem from="1603601562298" duration="15522000" />
       <workItem from="1603733516411" duration="743000" />
-      <workItem from="1603903750140" duration="2984000" />
+      <workItem from="1603903750140" duration="8468000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="518" y="286" key="NewPhpFileDialog" timestamp="1602691582990">
+    <state x="518" y="286" key="NewPhpFileDialog" timestamp="1603910320075">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="518" y="286" key="NewPhpFileDialog/0.0.1366.728/1366.0.1920.1080@0.0.1366.728" timestamp="1602691582990" />
+    <state x="518" y="286" key="NewPhpFileDialog/0.0.1366.728/1366.0.1920.1080@0.0.1366.728" timestamp="1603910320075" />
     <state x="184" y="0" key="SettingsEditor" timestamp="1603603930404">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

@@ -1,22 +1,17 @@
 <?php
-  require_once "Database.php";
+require_once 'Database.php';
+require_once 'Config.php';
 
-//  $users = Database::getInstance()->get('users', ['password', '=', 'password3']);
-//  $id = 10;
-//  Database::getInstance()->update('users', $id, [
-//    'username' => 'Marlin10',
-//    'password' => 'password10'
-//  ]);
+$GLOBALS['config'] = [
+    'mysql' => [
+        'host' => 'localhost',
+        'username' => 'root',
+        'password' => '',
+        'database' => 'test',
+        'something' => [
+            'no' => 'yes'
+        ]
+    ]
+];
 
-$users = Database::getInstance()->get('users', ['username', '=', 'user']);
-var_dump($users->first()->username);die();
-
-//  if ($users->error()) {
-//    echo 'we have an error';
-//  } else {
-//     foreach ($users->results() as $user) {
-//      echo $user->username . '<br>';
-//     }
-//  }
-  
-?>
+echo Config::get('mysql.host');
