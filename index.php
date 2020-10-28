@@ -2,9 +2,10 @@
   require_once "Database.php";
 
 //  $users = Database::getInstance()->get('users', ['password', '=', 'password3']);
-  Database::getInstance()->insert('users', [
-    'username' => 'Marlin',
-    'password' => 'password'
+  $id = 10;
+  Database::getInstance()->update('users', $id, [
+    'username' => 'Marlin10',
+    'password' => 'password10'
   ]);
 
 //  if ($users->error()) {
