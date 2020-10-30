@@ -49,9 +49,12 @@ if(Input::exists()) {
       ]);
 
       if($validation->passed()) {
-          echo 'passed';
+//          echo 'passed';
+        Session::flash('success', 'register success');
+//        var_dump(Session::flash('success'));die();
+//        header('Location: /test.php');
       } else {
-          foreach ($validation->errors() as $error) {
+          foreach($validation->errors() as $error) {
               echo $error . "<br>";
           }
       }
@@ -63,6 +66,7 @@ if(Input::exists()) {
 ?>
 
 <form action="" method="POST">
+  <?php echo Session::flash('success'); ?>
   <div class="field">
     <label for="username">Username</label>
     <input type="text" id="username" name="username" value="<?php echo Input::get('username')?>">
