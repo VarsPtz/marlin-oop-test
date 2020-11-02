@@ -106,10 +106,12 @@
           $values .= "?,";
         }
 
-        $values = rtrim($values, '');
+        $values = rtrim($values, ',');
 
 //        $sql = "INSERT INTO {$table} (`" . implode('`, `',array_keys($fields)) . "`) VALUES (" . $values . ")";
         $sql = "INSERT INTO {$table} (" . '`' . implode('`, `', array_keys($fields)) . '`' . ") VALUES ({$values})";
+
+//        var_dump($sql);die();
 
         if (!$this->query($sql, $fields)->error()) {
           return true;
