@@ -17,13 +17,13 @@ if(Input::exists()) {
     ]);
 
     if($validate->passed()) {
-      $user = new User();
+      $user = new User;
       $login = $user->login(Input::get('email'), Input::get('password'));
 
       if($login) {
-        echo 'login successful';
+          Redirect::to('index.php');
       } else {
-        echo 'login failed';
+          echo 'login failed';
       }
 
     } else {

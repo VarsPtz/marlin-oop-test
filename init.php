@@ -27,6 +27,6 @@ $GLOBALS['config'] = [
   ]
 ];
 
-?>
+
 
 
