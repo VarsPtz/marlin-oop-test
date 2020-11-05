@@ -14,8 +14,6 @@ class User {
 
           if ($this->find($user)) {
               $this->isLoggedIn = true;
-          } else {
-              // logout
           }
       }
     } else {
@@ -97,7 +95,7 @@ class User {
 
   public function update($fields = [], $id = null) {
 
-      if(!id && $this->isLoggedIn()) {
+      if(!$id && $this->isLoggedIn()) {
           $id = $this->data()->id;
       }
 
@@ -106,8 +104,15 @@ class User {
 
   public function hasPermissions($key = null) {
 
+//    var_dump($this->data()->group_id);die();
+
       if($key) {
-          $group = $this->db->get('groups', ['id', '=', $this->data()->group_id]);
+          $group = $this->db->get('groups', ['id', '=', 2]);
+
+          echo "<pre>";
+          var_dump($group);
+          echo "</pre>";
+          die();
 
           if($group->count()) {
               $permissions = $group->first()->permissions;
