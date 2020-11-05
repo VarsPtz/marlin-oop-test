@@ -107,12 +107,7 @@ class User {
 //    var_dump($this->data()->group_id);die();
 
       if($key) {
-          $group = $this->db->get('groups', ['id', '=', 2]);
-
-          echo "<pre>";
-          var_dump($group);
-          echo "</pre>";
-          die();
+          $group = $this->db->get('user_groups', ['id', '=', $this->data()->group_id]);
 
           if($group->count()) {
               $permissions = $group->first()->permissions;
